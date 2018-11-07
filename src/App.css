@@ -1,0 +1,58 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: rgb(255, 0, 225);
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+	text-rendering: optimizeLegibility;
+}
+
+/* Media query: 600px-PHONE 900px-TABLET PORTRAIT 1200px-TABLET LANDSCAPE*/
+
+@media(max-width: 75em) { 
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media(max-width: 52.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'PT Serif', serif;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+hr {
+  max-width: 100px;
+  margin: 25px auto 0;
+  border-width: 1px;
+  border-color: rgba(34, 34, 34, 0.1);
+}
+
+hr.light {
+  border-color: white;
+}
