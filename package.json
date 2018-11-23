@@ -28,7 +28,6 @@
     "eject": "react-scripts eject"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>_Test_/setup/test_setup_utils.js",
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
