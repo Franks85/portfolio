@@ -2,8 +2,9 @@ import styled from "styled-components";
 import {media} from './mediaQueryHelper';
 
 const SectionWrapper  = styled.div`
-  min-height: 60rem;
+  min-height: 65rem;
   position: relative;
+  
 `;
 
 const SectionTitleBox = styled.div`

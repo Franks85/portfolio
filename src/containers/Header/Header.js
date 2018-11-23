@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import MobileNavigation from "../../components/Navigation/mobileNavigation";
-import { TimelineLite, CSSPlugin, TweenLite, Power2, Back, Linear } from "gsap/all";
+import { TimelineLite, CSSPlugin, Power2, Back, Linear } from "gsap/all";
 import { SectionWrapper } from "../../styledComponents/styledComponents";
 import { Icon } from "../../Utilities";
 import { iconsData } from "./iconData";
 import { pathData, logoDefs } from "./logoData";
+
+// eslint-disable-next-line
+const plugins = [ CSSPlugin ];
 
 const HeaderBox = styled.div`
   position: absolute;
@@ -41,6 +44,7 @@ const ScrollBox = styled.div`
   grid-column: 7 / 9;
   grid-row: 9 / -1;
   display: flex;
+  z-index: 10;
 `;
 
 const ScrollArrow = styled.div`
@@ -166,11 +170,13 @@ class Header extends Component {
               <Icon name="arrowDown" width="60px" height="150px" color="#fff" />
             </ScrollArrow>
             <ScrollText>
-              <Text innerRef={box => (this.scrollText = box)}>Works</Text>
+              <Text innerRef={box => (this.scrollText = box)}>About me</Text>
             </ScrollText>
           </ScrollBox>
         </HeaderBox>
-       
+       <svg className="i">
+         <use href="#arrow-bottom" />
+       </svg>
       </SectionWrapper>
     );
   }

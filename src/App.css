@@ -1,6 +1,6 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
 *,
 *::after,
@@ -14,11 +14,11 @@
   --color-primary: rgb(255, 0, 225);
 }
 
-
-html,
 body {
   height: 100%;
-  width: 100%;
+  font-family: 'Pt Sans', serif;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 html {
@@ -38,12 +38,6 @@ html {
   html {
     font-size: 50%;
   }
-}
-
-body {
-  font-family: 'PT Serif', serif;
-  line-height: 1.7;
-  font-weight: 400;
 }
 
 hr {

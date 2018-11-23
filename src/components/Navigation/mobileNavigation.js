@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { media } from "../../styledComponents/mediaQueryHelper";
 import Toggle from "../../Utilities/Toggle";
 import { Spring, config, animated } from "react-spring";
 import { TimelineMax, Power2 } from "gsap/all";
