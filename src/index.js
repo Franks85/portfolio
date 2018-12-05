@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+/* if (process.env.NODE_ENV !== 'production') {
+  const {whyDidYouUpdate} = require('why-did-you-update')
+  whyDidYouUpdate(React)
+} */
 
-if (module.hot) {
-    module.hot.accept();
-    }
+ReactDOM.render(<App />, document.getElementById('root'));
 
 registerServiceWorker();
 

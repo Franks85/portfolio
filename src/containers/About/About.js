@@ -7,7 +7,6 @@ import { TimelineLite, CSSPlugin, Linear } from "gsap/all";
 import ScrollMagic from "scrollmagic";
 import enquire from "enquire.js";
 /* eslint import/no-webpack-loader-syntax: off */
-import "imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators";
 import "imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
 
 const Wrapper = styled.div`

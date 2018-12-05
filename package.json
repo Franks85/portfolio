@@ -19,7 +19,8 @@
     "react-with-gesture": "^1.0.10",
     "scrollmagic": "^2.0.6",
     "styled-components": "^3.4.0",
-    "styled-media-query": "^2.0.2"
+    "styled-media-query": "^2.0.2",
+    "why-did-you-update": "^1.0.6"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -38,6 +39,14 @@
     "jest": "^23.6.0",
     "jest-dom": "^2.1.0",
     "react-app-rewired": "^1.5.2"
+  },
+  "overrides": {
+    "scrollmagic": {
+      "main": [
+        "./scrollmagic/uncompressed/plugins/animation.gsap.js",
+        "./scrollmagic/uncompressed/plugins/debug.addIndicators.js"
+      ]
+    }
   },
   "browserslist": [
     ">0.2%",
