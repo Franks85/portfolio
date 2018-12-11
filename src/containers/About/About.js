@@ -92,7 +92,7 @@ class About extends Component {
     });
 
     function initScrollMagic() {
-      new ScrollMagic.Scene({
+      const scene = new ScrollMagic.Scene({
         triggerElement: "#about",
         triggerHook: 0,
         duration: "100%"
@@ -100,6 +100,7 @@ class About extends Component {
         .setPin("#about .pin-wrapper", {pushFollowers: false})
         .setTween(tween)
         .addTo(controller);
+        return scene;
     }
   }
 

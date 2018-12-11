@@ -206,6 +206,7 @@ class Project extends Component {
               <div className="titleContainer"
                 onMouseMove={this._onMouseMove}
                 onMouseOut={this._onMouseOut}
+                ref={div => this.title = div}
                 style={maskStyle}
               >
                 <div className="titleWrapper">

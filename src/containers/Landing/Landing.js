@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../../components/Navigation/footer";
 import Header from "../Header/Header";
 import About from "../About/About";
+import Skill from '../Skill/Skill'
 import Works from '../Works/Works';
 
 const Wrapper = styled.div`
@@ -17,6 +18,7 @@ class Landing extends Component {
       <Wrapper>
         <Header />
         <About />
+        <Skill />
         <Works />
         
         <Footer />
