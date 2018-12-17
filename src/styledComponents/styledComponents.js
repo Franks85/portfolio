@@ -98,4 +98,10 @@ const AnimatedButton = styled.a`
   }
 `;
 
-export { SectionWrapper , SectionTitleBox, SectionTitleText , SectionTitleSkew, ContentBox, AnimatedButton };
+const SectionDivider = styled.p`
+  font-size: 3rem;
+  color: #fc00a6;
+  margin: 5% 0 0 5%;
+`;
+
+export { SectionWrapper , SectionTitleBox, SectionTitleText , SectionDivider, SectionTitleSkew, ContentBox, AnimatedButton };

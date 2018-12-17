@@ -13,6 +13,17 @@ const Wrapper = styled.div`
   position: relative;
   height: 130rem;
   width: 100%;
+  
+  ${media.lessThan("desktop")`
+    height: 55rem;
+  `};
+  ${media.lessThan("tablet")`
+    height: 50rem;
+  `};
+  ${media.lessThan("phone")`
+    height: 30rem;
+    margin-top: 10%;
+  `};
 `;
 
 const Box = styled.div`
@@ -33,10 +44,13 @@ const Box = styled.div`
     transform: translate(-50%, -50%);
     height: 70%;
     width: 75%;
-  }
-  ${media.lessThan("desktop")`
-    
+    ${media.lessThan("tablet")`
+    top: 50%;
+    height: 30rem;
+    width: 80%;
   `};
+  }
+  
 `;
 
 class About extends Component {
@@ -49,20 +63,21 @@ class About extends Component {
     const bookPath = document.getElementById("bookPath");
     const textPath1 = document.getElementsByClassName("textPath");
     const textPath2 = document.getElementsByClassName("textPath2");
+    const ease = Linear.easeNone;
 
     const controller = new ScrollMagic.Controller();
 
     const tween = this.tlBook
       .set(textPath2, { autoAlpha: 0 })
       .set(textPath1, { strokeWidth: 0.4 })
-      .to(bookPath, 1, { strokeDashoffset: 0, ease: Linear.easeNone })
+      .to(bookPath, 1, { strokeDashoffset: 0, ease: ease })
       .staggerTo(
         textPath1,
         0.1,
         {
           strokeDashoffset: 0,
           stroke: "rgb(255,0,225)",
-          ease: Linear.easeNone,
+          ease: ease,
           fill: "#fff"
         },
         0.05
@@ -75,19 +90,19 @@ class About extends Component {
         {
           strokeDashoffset: 0,
           stroke: "rgb(255,0,225)",
-          ease: Linear.easeNone,
+          ease: ease,
           fill: "#fff"
         },
         0.05
       )
       .play();
 
-    enquire.register("screen and (min-width: 980px)", {
+    enquire.register("screen and (min-width: 1056px)", {
       match: function() {
         initScrollMagic();
       },
       unmatch: function() {
-        //controller.destroy(true);
+        controller.destroy(true);
       }
     });
 
@@ -106,8 +121,8 @@ class About extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <Box id="about">
+      <Wrapper id="about">
+        <Box >
           <div className="pin-wrapper">
             <div className="book">
               <Icon name="book" />

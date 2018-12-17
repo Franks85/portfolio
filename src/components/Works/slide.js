@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { TimelineLite, TweenLite, CSSPlugin, Power2 } from "gsap/all";
 import ScrollMagic from "scrollmagic";
+import { media } from "../../styledComponents/mediaQueryHelper";
 
 const Wrapper = styled.div`
   flex: 1;
@@ -14,6 +15,14 @@ const Slide = styled.div`
   display: flex;
   border: 2px solid #fc00a6;
   position: relative;
+  ${media.lessThan("tablet")`
+    width: 70%;
+    margin: 5% 15%;
+  `};
+  ${media.lessThan("phone")`
+    width: 90%;
+    margin: 5%;
+  `};
   .bcg-start,
   .bcg-primary {
     position: absolute;
@@ -26,12 +35,18 @@ const Slide = styled.div`
     background-color: #1d1a1a;
     transform-origin: 100% 50%;
     transform: scaleX(0);
+    ${media.lessThan("tablet")`
+    display: none;
+  `};
   }
   .bcg-primary {
     background-color: #fc00a6;
     transform-origin: 0% 50%;
     transform: scaleX(0);
     z-index: 10;
+    ${media.lessThan("tablet")`
+    display: none;
+  `};
   }
   .left,
   .right {
@@ -57,10 +72,16 @@ const Slide = styled.div`
           cursor: pointer;
           h2 {
             font-size: 4rem;
+            ${media.lessThan("phone")`
+              font-size: 3rem;
+            `};
           }
           p {
-        font-size: 2.5rem;
-      }
+            font-size: 2.5rem;
+            ${media.lessThan("phone")`
+              font-size: 2rem;
+            `};
+         }
         }
         .cloneWrapper {
             position: absolute;
@@ -104,6 +125,9 @@ const Slide = styled.div`
   }
   .right {
     position: relative;
+    ${media.lessThan("tablet")`
+    display: none;
+  `};
   }
 `;
 

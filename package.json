@@ -9,6 +9,7 @@
     "react": "^16.4.2",
     "react-app-rewire-styled-components": "^3.0.2",
     "react-dom": "^16.4.2",
+    "react-error-boundary": "^1.2.3",
     "react-gsap": "^1.1.0",
     "react-icomoon": "^1.0.0",
     "react-reveal": "^1.2.2",

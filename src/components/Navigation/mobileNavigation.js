@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Toggle from "../../Utilities/Toggle";
 import { Spring, config, animated } from "react-spring";
 import { TimelineMax, Power2 } from "gsap/all";
+import { media } from "../../styledComponents/mediaQueryHelper";
 
 const MobileNavContainer = styled(animated.div)`
   
@@ -42,12 +43,15 @@ const MobileNavToggleLabel = styled.div`
 
 const MobileNav = styled(animated.nav)`
   
-  background-color: #00457C;
+  background-color: #00457c;
   position: fixed;
   width: 30vw;
   top: 0;
   right: 0;
   z-index: 150;
+  ${media.lessThan("tablet")`
+    width: 50vw;
+  `};
 `;
 
 const MobileNavList = styled.ul`
@@ -68,7 +72,7 @@ const MobileNavLink = styled.a`
   :visited {
     display: inline-block;
     font-size: 2.8rem;
-    color: rgba(222, 53, 202, 0.78);
+    color:rgb(255, 0, 225);
     letter-spacing: 0.3rem;
     padding: 0.8rem 1.6rem;
     text-decoration: none;

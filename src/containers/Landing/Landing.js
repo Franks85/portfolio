@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { SectionDivider } from "../../styledComponents/styledComponents";
 import Footer from "../../components/Navigation/footer";
 import Header from "../Header/Header";
 import About from "../About/About";
 import Skill from '../Skill/Skill'
 import Works from '../Works/Works';
+import Contact from '../Contact/Contact'
 
 const Wrapper = styled.div`
   height: 100%;
@@ -19,8 +21,12 @@ class Landing extends Component {
         <Header />
         <About />
         <Skill />
+        <SectionDivider>&lt; Works &gt;</SectionDivider>
         <Works />
-        
+        <SectionDivider>&lt;/ Works &gt;</SectionDivider>
+        <SectionDivider>&lt; Contact &gt;</SectionDivider>
+        <Contact />
+        <SectionDivider>&lt;/ Contact &gt;</SectionDivider>
         <Footer />
       </Wrapper>
     );
