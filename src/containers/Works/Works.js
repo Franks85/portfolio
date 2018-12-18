@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Slide from "../../components/Works/slide";
-import work1 from './img/portfolio.png';
+import work1 from './img/portfolio.jpeg';
 import work2 from "./img/work1.jpg";
-import work3 from "./img/om.png";
+import work3 from "./img/om.jpeg";
 
 
 const Wrapper = styled.div`

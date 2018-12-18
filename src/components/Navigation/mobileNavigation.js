@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Toggle from "../../Utilities/Toggle";
 import { Spring, config, animated } from "react-spring";
-import { TimelineMax, Power2 } from "gsap/all";
+import { TimelineMax, TweenLite, Power2, Linear } from "gsap/all";
 import { media } from "../../styledComponents/mediaQueryHelper";
 
 const MobileNavContainer = styled(animated.div)`
@@ -67,9 +67,7 @@ const MobileNavItem = styled.li`
   margin: 2rem 0;
 `;
 
-const MobileNavLink = styled.a`
-  &:link,
-  :visited {
+const MobileNavLink = styled.button`
     display: inline-block;
     font-size: 2.8rem;
     color:rgb(255, 0, 225);
@@ -83,11 +81,12 @@ const MobileNavLink = styled.a`
       transparent 50%,
       rgba(222, 53, 202, 0.78) 50%
     );
+    cursor: pointer;
+    border: none;
     background-size: 240%;
     transition: all 0.6s;
-  }
-  &:hover,
-  :active {
+  
+  &:hover {
     background-position: 100%;
     color: #fff;
     transform: translateX(1rem);
@@ -109,6 +108,10 @@ class MobileNavigation extends Component {
     
     this.tl.staggerTo(lines, .2, {scaleX: 1.5, repeat: 1, yoyo: true, ease: Power2.easeInOut}, .1).play();
   }
+
+  handleScroll = (e) => {
+    TweenLite.to(window, 1, { scrollTo: `#${e}`, ease: Linear.easeNone });
+  };
 
   render() {
     const Content = ({
@@ -155,18 +158,18 @@ class MobileNavigation extends Component {
           }}
         >
           <MobileNavList>
-            <MobileNavItem>
-              <MobileNavLink href="#about" onClick={toggle}>
+            <MobileNavItem onClick={this.handleScroll.bind(null,"about")}>
+              <MobileNavLink onClick={toggle}>
                 About
               </MobileNavLink>
             </MobileNavItem>
-            <MobileNavItem>
-              <MobileNavLink href="#works" onClick={toggle}>
+            <MobileNavItem onClick={this.handleScroll.bind(null,"works")}>
+              <MobileNavLink onClick={toggle}>
                 Works
               </MobileNavLink>
             </MobileNavItem>
-            <MobileNavItem>
-              <MobileNavLink href="#contact" onClick={toggle}>
+            <MobileNavItem onClick={this.handleScroll.bind(null,"contact")}>
+              <MobileNavLink onClick={toggle}>
                 Contact
               </MobileNavLink>
             </MobileNavItem>

@@ -62,7 +62,7 @@ const footer = () => {
         <a href="credit">Privacy Policy</a>
       </LinkBox>
       <Copyright>
-        <p>&copy; Frank Design</p>
+        <p>&copy; Erreffe Design</p>
       </Copyright>
     </Wrapper>
   );
