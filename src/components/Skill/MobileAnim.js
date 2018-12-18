@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Icon } from "../../Utilities";
-import { TimelineMax, Power0, RoughEase, Power1, SlowMo, Back, TweenLite, TweenMax } from "gsap/all";
+import { TimelineMax, Power0, RoughEase, Power1, Back, TweenLite, TweenMax, CSSPlugin, TextPlugin } from "gsap/all";
 import ScrollMagic from "scrollmagic";
 import { media } from "../../styledComponents/mediaQueryHelper";
+
+// eslint-disable-next-line
+const plugins = [CSSPlugin, TextPlugin];
 
 const SkillContainerMobile = styled.div`
   height: 100%;
@@ -89,9 +92,6 @@ class MobileAnim extends Component {
   };
 
   introAnim = () => {
-    const videoPowerUp = this.tlVideoPowerUp
-      .fromTo(".pcVideo-mob", 0.15, { fill: "#424242" }, { fill: "#000" })
-      .play();
     const lancetFlickering = this.tlLancetFlickering
       .fromTo(
         ".lancet-mob",

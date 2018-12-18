@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { TimelineLite, TweenLite, CSSPlugin, Power2 } from "gsap/all";
+import { TimelineLite, TweenLite, CSSPlugin, TextPlugin, Power2 } from "gsap/all";
 import ScrollMagic from "scrollmagic";
 import { media } from "../../styledComponents/mediaQueryHelper";
+
+// eslint-disable-next-line
+const plugins = [CSSPlugin, TextPlugin];
 
 const Wrapper = styled.div`
   flex: 1;

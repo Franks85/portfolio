@@ -4,6 +4,9 @@ import { TimelineLite, CSSPlugin, Back } from "gsap/all";
 import ScrollMagic from "scrollmagic";
 import { Icon } from "../../Utilities";
 
+// eslint-disable-next-line
+const plugins = [CSSPlugin];
+
 const WheelBox = styled.div`
   padding: 1% 0;
   display: flex;
