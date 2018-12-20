@@ -22,8 +22,8 @@ class Works extends Component {
           projectNum="Project 01"
           projectTitle="Erreffe Design"
           projectDesc="My portfolio Website"
-          demoHref="https://greensock.com/gsap"
-          githubHref="https://greensock.com/gsap"
+          demoHref="https://vigorous-raman-11cd00.netlify.com/"
+          githubHref="https://github.com/Franks85/portfolio"
           bcg={work1}
         />
         <Slide
@@ -31,8 +31,8 @@ class Works extends Component {
           projectNum="Project 02"
           projectTitle="Videomaker"
           projectDesc="Artist demo Website"
-          demoHref="https://greensock.com/gsap"
-          githubHref="https://greensock.com/gsap"
+          demoHref="https://brave-boyd-23edd6.netlify.com/"
+          githubHref="https://github.com/Franks85/videoMakerTheme"
           bcg={work2}
         />
         <Slide
@@ -40,8 +40,8 @@ class Works extends Component {
           projectNum="Project 03"
           projectTitle="Orizzonte Marino"
           projectDesc="Bed & Breakfast Website"
-          demoHref="https://greensock.com/gsap"
-          githubHref="https://greensock.com/gsap"
+          demoHref="https://reverent-lalande-8f0106.netlify.com/"
+          githubHref="https://github.com/Franks85/OMar"
           bcg={work3}
         />  
       </Wrapper>
