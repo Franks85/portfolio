@@ -250,10 +250,10 @@ class Project extends Component {
               <div className="link">
                 <ul>
                   <li>
-                    <a href={this.props.demoHref}>Live Demo</a>
+                    <a href={this.props.demoHref} target="_blank" rel="noopener noreferrer">Live Demo</a>
                   </li>
                   <li>
-                    <a href={this.props.githubHref}>Github Source Code</a>
+                    <a href={this.props.githubHref} target="_blank" rel="noopener noreferrer">Github Source Code</a>
                   </li>
                 </ul>
               </div>
