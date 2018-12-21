@@ -51,3 +51,7 @@ hr {
 hr.light {
   border-color: white;
 }
+
+.app {
+  position: relative;
+}

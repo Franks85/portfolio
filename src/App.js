@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import Landing from "./containers/Landing/Landing";
+import Credit from './components/Footer/credit'
 import styled, {keyframes} from 'styled-components';
 
 const load8 = keyframes`
@@ -40,6 +41,7 @@ class App extends Component {
         <div>
           <main>
             <Route path="/" exact component={Landing} />
+            <Route path="/credit" exact component={Credit} />
           </main>
         </div>
       </BrowserRouter>

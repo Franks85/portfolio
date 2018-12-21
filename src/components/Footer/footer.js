@@ -21,7 +21,7 @@ const LinkBox = styled.div`
   position: absolute;
   top: 20%;
   left: 15%;
-  width: 40%;
+  width: 20%;
   height: 60%;
   display: flex;
   align-items: center;
@@ -58,8 +58,7 @@ const footer = () => {
   return (
     <Wrapper>
       <LinkBox>
-        <a href="credit">Credit</a>
-        <a href="credit">Privacy Policy</a>
+        <a href="/credit" target="_blank" rel="noopener noreferrer">Credit</a>
       </LinkBox>
       <Copyright>
         <p>&copy; Erreffe Design</p>
