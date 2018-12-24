@@ -5,7 +5,7 @@ import { TweenLite } from "gsap/all";
 import { media } from "../../styledComponents/mediaQueryHelper";
 
 const Wrapper = styled.div`
-  height: 60rem;
+  height: 45rem;
   position: relative;
 `;
 
@@ -16,9 +16,6 @@ const Box = styled.div`
   width: 80%;
   height: 90%;
   margin: 5% 0 0 10%;
-  ${media.lessThan("phone")`
-    
-  `};
   .mail {
     padding: 0 0 5% 5%;
     ${media.lessThan("phone")`

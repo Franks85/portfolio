@@ -10,7 +10,9 @@ const plugins = [CSSPlugin, TextPlugin];
 const Wrapper = styled.div`
   flex: 1;
   overflow: hidden;
+  
 `;
+
 const Slide = styled.div`
   height: 90%;
   width: 80%;
@@ -24,6 +26,7 @@ const Slide = styled.div`
   `};
   ${media.lessThan("phone")`
     width: 90%;
+    min-height: 40rem;
     margin: 5%;
   `};
   .bcg-start,
@@ -65,7 +68,7 @@ const Slide = styled.div`
       margin: auto;
       width: 80%;
       text-align: center;
-      padding: 5% 0;
+      padding: 15% 0;
       .titleContainer {
         font-family: "Poppins", sans-serif;
         position: relative;
@@ -76,7 +79,7 @@ const Slide = styled.div`
           h2 {
             font-size: 4rem;
             ${media.lessThan("phone")`
-              font-size: 3rem;
+              font-size: 2.8rem;
             `};
           }
           p {

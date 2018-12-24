@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { TimelineLite, CSSPlugin, Back } from "gsap/all";
 import ScrollMagic from "scrollmagic";
 import { Icon } from "../../Utilities";
+import { media } from "../../styledComponents/mediaQueryHelper";
 
 // eslint-disable-next-line
 const plugins = [CSSPlugin];
@@ -80,14 +81,14 @@ class Wheel extends Component {
     return (
       <WheelBox className='wheel-box'>
         <div className="info-icon">
-          <Icon name="handsCircle" width="110" height="110" className="hands" />
+          <Icon name="handsCircle" width="70" height="70" className="hands" />
         </div>
         <div className="social-link">
           <Icon
             name={name}
             color="rgb(255,0,225)"
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             className="link"
           />
         </div>
