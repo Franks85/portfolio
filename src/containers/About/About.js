@@ -5,7 +5,6 @@ import { media } from "../../styledComponents/mediaQueryHelper";
 // eslint-disable-next-line
 import { TimelineLite, CSSPlugin, Linear } from "gsap/all";
 import ScrollMagic from "scrollmagic";
-import enquire from "enquire.js";
 /* eslint import/no-webpack-loader-syntax: off */
 import "imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
 
@@ -13,7 +12,7 @@ const Wrapper = styled.div`
   position: relative;
   height: 130rem;
   width: 100%;
-  
+
   ${media.lessThan("desktop")`
     height: 55rem;
   `};
@@ -50,7 +49,6 @@ const Box = styled.div`
     width: 80%;
   `};
   }
-  
 `;
 
 class About extends Component {
@@ -97,14 +95,7 @@ class About extends Component {
       )
       .play();
 
-    enquire.register("screen and (min-width: 1056px)", {
-      match: function() {
-        initScrollMagic();
-      },
-      unmatch: function() {
-        controller.destroy(true);
-      }
-    });
+    initScrollMagic();
 
     function initScrollMagic() {
       const scene = new ScrollMagic.Scene({
@@ -112,17 +103,17 @@ class About extends Component {
         triggerHook: 0,
         duration: "100%"
       })
-        .setPin("#about .pin-wrapper", {pushFollowers: false})
+        .setPin("#about .pin-wrapper", { pushFollowers: false })
         .setTween(tween)
         .addTo(controller);
-        return scene;
+      return scene;
     }
   }
 
   render() {
     return (
       <Wrapper id="about">
-        <Box >
+        <Box>
           <div className="pin-wrapper">
             <div className="book">
               <Icon name="book" />
@@ -135,4 +126,3 @@ class About extends Component {
 }
 
 export default About;
-

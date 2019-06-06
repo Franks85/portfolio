@@ -27,6 +27,7 @@ const Content = styled.div`
     letter-spacing: .25rem;
     color: #fff;
   }
+  
   ul {
     list-style: none;
   }
@@ -69,6 +70,7 @@ const credit = () => {
               href="http://creativecommons.org/licenses/by/3.0/"
               title="Creative Commons BY 3.0"
               target="_blank"
+              rel="noopener noreferrer"
             >
               CC 3.0 BY
             </a>

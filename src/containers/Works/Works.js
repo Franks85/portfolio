@@ -40,8 +40,8 @@ class Works extends Component {
           projectNum="Project 03"
           projectTitle="Orizzonte Marino"
           projectDesc="Bed & Breakfast Website"
-          demoHref="https://reverent-lalande-8f0106.netlify.com/"
-          githubHref="https://github.com/Franks85/OMar"
+          demoHref="https://pensive-wiles-02feab.netlify.com/"
+          githubHref="https://github.com/Franks85/om"
           bcg={work3}
         />  
       </Wrapper>

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { TimelineLite, CSSPlugin, Back } from "gsap/all";
 import ScrollMagic from "scrollmagic";
 import { Icon } from "../../Utilities";
-import { media } from "../../styledComponents/mediaQueryHelper";
 
 // eslint-disable-next-line
 const plugins = [CSSPlugin];
