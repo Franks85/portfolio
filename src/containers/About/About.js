@@ -5,6 +5,7 @@ import { media } from "../../styledComponents/mediaQueryHelper";
 // eslint-disable-next-line
 import { TimelineLite, CSSPlugin, Linear } from "gsap/all";
 import ScrollMagic from "scrollmagic";
+import enquire from "enquire.js";
 /* eslint import/no-webpack-loader-syntax: off */
 import "imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
 
@@ -17,11 +18,7 @@ const Wrapper = styled.div`
     height: 55rem;
   `};
   ${media.lessThan("tablet")`
-    height: 50rem;
-  `};
-  ${media.lessThan("phone")`
-    height: 30rem;
-    margin-top: 10%;
+    display: none;
   `};
 `;
 
